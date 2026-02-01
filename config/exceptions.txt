@@ -1,0 +1,7 @@
+# Файл исключений для Nexus Audit Tool
+# Репозитории, которым разрешен анонимный доступ
+
+# Примеры:
+# public
+# docker-hub-proxy
+# maven-central
