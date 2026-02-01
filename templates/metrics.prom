@@ -1,0 +1,31 @@
+# HELP nexus_audit_info Information about Nexus audit
+# TYPE nexus_audit_info gauge
+nexus_audit_info{nexus="{nexus_hostname}",url="{nexus_url}"} 1
+
+# HELP nexus_audit_repositories_total Total number of repositories
+# TYPE nexus_audit_repositories_total gauge
+nexus_audit_repositories_total{nexus="{nexus_hostname}"} {total}
+
+# HELP nexus_audit_repositories_anonymous_total Repositories with anonymous access
+# TYPE nexus_audit_repositories_anonymous_total gauge
+nexus_audit_repositories_anonymous_total{nexus="{nexus_hostname}"} {anonymous_access}
+
+# HELP nexus_audit_repositories_vulnerable_total Vulnerable repositories
+# TYPE nexus_audit_repositories_vulnerable_total gauge
+nexus_audit_repositories_vulnerable_total{nexus="{nexus_hostname}"} {vulnerable}
+
+# HELP nexus_audit_repositories_exceptions_total Repository exceptions
+# TYPE nexus_audit_repositories_exceptions_total gauge
+nexus_audit_repositories_exceptions_total{nexus="{nexus_hostname}"}} {exceptions}
+
+# HELP nexus_audit_repositories_errors_total Repository check errors
+# TYPE nexus_audit_repositories_errors_total gauge
+nexus_audit_repositories_errors_total{nexus="{nexus_hostname}"} {errors}
+
+# HELP nexus_audit_scan_duration_seconds Audit scan duration in seconds
+# TYPE nexus_audit_scan_duration_seconds gauge
+nexus_audit_scan_duration_seconds{nexus="{nexus_hostname}"} {scan_duration}
+
+# HELP nexus_audit_last_scan_timestamp Last audit scan timestamp
+# TYPE nexus_audit_last_scan_timestamp gauge
+nexus_audit_last_scan_timestamp{nexus="{nexus_hostname}"} {last_scan_timestamp}
