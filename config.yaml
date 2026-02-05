@@ -1,0 +1,24 @@
+nexus:
+  url: "https://nexus.example.com"
+  username: "admin"
+  password: "admin123"
+
+ssl:
+  rootCA: "/path/to/ca.pem"  # опционально
+  verify_ssl: true
+
+audit:
+  repository_types: ["hosted", "proxy"]
+  repository_formats: ["maven2", "docker"]
+  exclude_file: "excluded_repos.txt"
+
+prometheus:
+  enabled: true
+  file: "/var/lib/node_exporter/nexus_audit.prom"
+
+email:
+  enabled: true
+  smtp_host: "localhost"
+  smtp_port: 25
+  from_email: "nexus-auditor@example.com"
+  to_emails: ["admin@example.com", "security@example.com"]
